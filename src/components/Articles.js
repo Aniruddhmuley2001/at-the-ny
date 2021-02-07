@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Article from './Article.js';
+import CircularIndeterminate from "./layouts/CircularIndeterminate";
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles({
@@ -21,7 +22,7 @@ const Articles = ({loading, articles}) => {
         <>
             {
                 loading ? (
-                    "Loading..."
+                    <CircularIndeterminate />
                 ) : (
                     <div className={classes.root}>
                         <Grid container spacing={3}>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 import axios from 'axios';
 import NavBar from './components/layouts/NavBar'
-// import TopStories from "./components/TopStories";
+import TopStories from "./components/TopStories";
 import Articles from "./components/Articles";
 import Search from "./components/Search";
 import Typography from "@material-ui/core/Typography";
@@ -59,8 +59,7 @@ const App = () => {
 
               <Route exact path="/topstories" render={() => (
                 <div>
-                  {/*<TopStories loading={loading} topStories={topStories} getTopArticles={getTopArticles} />*/}
-                  {/* <a href="/">Sample</a> */}
+                  <TopStories loading={loading} topStories={topStories} getTopArticles={getTopArticles} />
                 </div>
               )} />
 
